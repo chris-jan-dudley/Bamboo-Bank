@@ -11,4 +11,9 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
     assert_equal session[:user_id], users(:chris).id
   end
+
+  test "logging out destroys the session and resets current user" do
+    delete '/session',
+        params: { id: users(:chris).id }
+  end
 end

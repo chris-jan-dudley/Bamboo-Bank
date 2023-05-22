@@ -1,11 +1,11 @@
 <header>
     <h2><%= link_to "Bamboo Bank", root_path %></h2>
     <nav>
-            <%= link_to "Register", register_path %>
             <% if current_user %>
-                <h3><%= current_user.name %></h3>
+                <h3><%= link_to current_user.name, current_user %></h3>
                 <%= link_to "Log Out", logout_path %>
             <% else %>
+                <%= link_to "Register", register_path %>
                 <%= link_to "Login", login_path %>
             <% end %>
     </nav>

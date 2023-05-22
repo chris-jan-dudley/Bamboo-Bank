@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'bank#index'
+  
   resources :transactions
   resources :users
 

@@ -1,6 +1,6 @@
 <h3>Login to your account</h3>
 
-<%= form_with url: login_path do |form| %>
+<%= form_with(url: session_path) do |form| %>
     <%= form.label :email %>
     <%= form.text_field :email %>
 
