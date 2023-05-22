@@ -25,7 +25,7 @@
 <ul>
     <% @user.received_transactions.each do |transaction| %>
         <li>
-            ൫<%= transaction.amount %> sent to <%= User.find(transaction.payer_id).name %> on <%= transaction.created_at %>
+            ൫<%= transaction.amount %> received from <%= User.find(transaction.payer_id).name %> on <%= transaction.created_at %>
         </li>
     <% end %>
 </ul>
