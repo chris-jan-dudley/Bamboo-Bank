@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 User.create!(
   name: 'Chris',
   email: 'chris@bamboo.com',

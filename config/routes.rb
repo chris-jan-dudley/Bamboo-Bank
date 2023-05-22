@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root to: 'bank#index'
-  
+
   resources :transactions
   resources :users
 
@@ -10,5 +12,5 @@ Rails.application.routes.draw do
   get 'register' => 'users#new'
   get 'account' => 'users#show'
 
-  resource :session, only: [:new, :create, :destroy]
+  resource :session, only: %i[new create destroy]
 end
