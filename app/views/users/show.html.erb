@@ -4,7 +4,7 @@
 
 <h2>Transactions</h2>
 
-<%= link_to "Send Money", new_transaction_path %>
+<button><%= link_to "Send Money", new_transaction_path %></button>
 
 <h3>Sent</h3>
 <% if @user.sent_transactions.any? %>
