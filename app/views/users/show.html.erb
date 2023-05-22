@@ -1,0 +1,34 @@
+<h1>Welcome to your Bamboo Bank Account <%= @user.name %></h1>
+
+<h2>Your current balance is <%= @user.balance %></h2>
+
+<h2>Transactions</h2>
+
+<%= link_to "Send Money", new_transaction_path %>
+
+<h3>Sent</h3>
+<% if @user.sent_transactions.any? %>
+<ul>
+    <% @user.sent_transactions.each do |transaction| %>
+        <li>
+            <%= transaction.amount %> sent to <%= transaction.recipient.name %> on <%= transaction.created_at %>
+        </li>
+    <% end %>
+</ul>
+<% else %>
+    <p>You have not sent any transactions.</p>
+<% end %>
+
+<h3>Received</h3>
+
+<% if @user.received_transactions.any? %>
+<ul>
+    <% @user.received_transactions.each do |transaction| %>
+        <li>
+            <%= transaction.amount %> sent to <%= transaction.recipient.name %> on <%= transaction.created_at %>
+        </li>
+    <% end %>
+</ul>
+<% else %>
+        <p>You have not received any transactions.</p>
+<% end %>

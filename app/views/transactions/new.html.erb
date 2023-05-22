@@ -1,0 +1,11 @@
+<h2>Send Money</h2>
+
+<%= form_with model: @transaction do |form| %>
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+
+    <%= form.label :payee_id %>
+    <%= form.collection_select :payee_id, User.all, :id, :name %>
+
+    <%= form.submit %>
+<% end %>

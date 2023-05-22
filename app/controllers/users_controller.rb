@@ -11,8 +11,12 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to root_path, notice: 'Successfully created account!'
         else
-            render :new
+            render :new, notice: 'Account creation failed!'
         end
+    end
+
+    def show
+        @user = User.find(session[:user_id])
     end
 
     private 
