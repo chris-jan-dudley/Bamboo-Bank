@@ -11,7 +11,7 @@ Welcome to Bamboo Bank, a simple Rails web app which allows users to:
 * Rails 7.0.4.3
 
 ## Running the App
-1. Clone into the Bamboo Bank repo on your machine, with the above versins of Ruby and Rails installed. 
+1. Clone into the Bamboo Bank repo on your machine, with the above versions of Ruby and Rails installed. 
 2. From the repository root, run 
     ```
     bundle install                  # installs dependencies
