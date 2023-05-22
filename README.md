@@ -16,7 +16,7 @@ Welcome to Bamboo Bank, a simple Rails web app which allows users to:
     ```
     bundle install                  # installs dependencies
     rails css:install:bootstrap     # installs out-of-the-box bootstrap to improve styling
-    rails db:migrate db:seet        # runs database migrations to create user and transaction models, and seeds two users
+    rails db:migrate db:seed        # runs database migrations to create user and transaction models, and seeds two users
     ```
 3. Start the rails server by running `rails server` or `rails s`
 4. Access the app from `http://localhost:3000/`. You should see a home screen for the Bank with options to log in or register a user.
