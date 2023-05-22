@@ -1,6 +1,6 @@
 <h1>Welcome to your Bamboo Bank Account <%= @user.name %></h1>
 
-<h2>Your current balance is <%= @user.balance %></h2>
+<h2>Your current balance is ൫<%= @user.balance %></h2>
 
 <h2>Transactions</h2>
 
@@ -11,7 +11,7 @@
 <ul>
     <% @user.sent_transactions.each do |transaction| %>
         <li>
-            <%= transaction.amount %> sent to <%= transaction.recipient.name %> on <%= transaction.created_at %>
+            ൫<%= transaction.amount %> sent to <%= User.find(transaction.payee_id).name %> on <%= transaction.created_at %>
         </li>
     <% end %>
 </ul>
@@ -25,7 +25,7 @@
 <ul>
     <% @user.received_transactions.each do |transaction| %>
         <li>
-            <%= transaction.amount %> sent to <%= transaction.recipient.name %> on <%= transaction.created_at %>
+            ൫<%= transaction.amount %> sent to <%= User.find(transaction.payer_id).name %> on <%= transaction.created_at %>
         </li>
     <% end %>
 </ul>
