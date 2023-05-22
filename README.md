@@ -18,9 +18,10 @@ Welcome to Bamboo Bank, a simple Rails web app which allows users to:
     rails css:install:bootstrap     # installs out-of-the-box bootstrap to improve styling
     rails db:migrate db:seet        # runs database migrations to create user and transaction models, and seeds two users
     ```
-3. Access the app from `http://localhost:3000/`. You should see a home screen for the Bank with options to log in or register a user.
-4. To log into a seeded user, use `email = chris@bamboo.com, password = 123`
-5. After succesfully registering or logging in, you should see your profile home page
+3. Start the rails server by running `rails server` or `rails s`
+4. Access the app from `http://localhost:3000/`. You should see a home screen for the Bank with options to log in or register a user.
+5. To log into a seeded user, use `email = chris@bamboo.com, password = 123` or `email = tom@bamboo.com, password = 456`
+6. After succesfully registering or logging in, you should see your profile home page
 
 ## Features
 * Once logged in, you should be shown your account page (you can return via the navbar)
